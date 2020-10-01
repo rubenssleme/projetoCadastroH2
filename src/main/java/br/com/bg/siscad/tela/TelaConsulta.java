@@ -1,6 +1,6 @@
 package br.com.bg.siscad.tela;
 
-import br.com.bg.siscad.tela.controlador.ControladorTelaConsulta;
+import br.com.bg.siscad.controlador.ControladorTelaConsulta;
 
 /**
  *

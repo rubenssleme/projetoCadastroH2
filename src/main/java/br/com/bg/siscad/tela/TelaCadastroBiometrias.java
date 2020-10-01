@@ -1,6 +1,6 @@
 package br.com.bg.siscad.tela;
 
-import br.com.bg.siscad.tela.controlador.ControladorTelaCadastroAluno;
+import br.com.bg.siscad.controlador.ControladorTelaCadastroAluno;
 
 /**
  *

@@ -1,4 +1,4 @@
-package br.com.bg.siscad.cadastramento.api.service;
+package br.com.bg.siscad.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.bg.siscad.cadastramento.api.Usuario;
-import br.com.bg.siscad.cadastramento.api.repository.UsuarioRepositorio;
+import br.com.bg.siscad.dominio.Usuario;
+import br.com.bg.siscad.repository.UsuarioRepositorio;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Service

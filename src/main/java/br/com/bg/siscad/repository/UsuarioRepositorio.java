@@ -1,8 +1,8 @@
-package br.com.bg.siscad.cadastramento.api.repository;
+package br.com.bg.siscad.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import br.com.bg.siscad.cadastramento.api.Usuario;
+import br.com.bg.siscad.dominio.Usuario;
 import java.util.Optional;
 import org.springframework.stereotype.Repository;
 @Repository

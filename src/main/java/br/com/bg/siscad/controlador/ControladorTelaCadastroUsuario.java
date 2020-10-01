@@ -1,6 +1,6 @@
-package br.com.bg.siscad.tela.controlador;
+package br.com.bg.siscad.controlador;
 
-import br.com.bg.siscad.cadastramento.api.Usuario;
+import br.com.bg.siscad.dominio.Usuario;
 import br.com.bg.siscad.tela.TelaCadastroUsuario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

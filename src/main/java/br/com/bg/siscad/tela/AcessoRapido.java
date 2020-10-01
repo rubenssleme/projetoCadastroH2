@@ -1,6 +1,6 @@
 package br.com.bg.siscad.tela;
 
-import br.com.bg.siscad.tela.controlador.ControladorTelaAcessoRapido;
+import br.com.bg.siscad.controlador.ControladorTelaAcessoRapido;
 import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 

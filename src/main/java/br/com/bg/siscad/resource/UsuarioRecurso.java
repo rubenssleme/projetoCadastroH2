@@ -1,4 +1,4 @@
-package br.com.bg.siscad.cadastramento.api.resource;
+package br.com.bg.siscad.resource;
 
 import java.net.URI;
 import java.util.List;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import br.com.bg.siscad.cadastramento.api.Usuario;
-import br.com.bg.siscad.cadastramento.api.service.UsuarioServico;
+import br.com.bg.siscad.dominio.Usuario;
+import br.com.bg.siscad.service.UsuarioServico;
 
 @RestController
 @RequestMapping(value = "/usuarios")

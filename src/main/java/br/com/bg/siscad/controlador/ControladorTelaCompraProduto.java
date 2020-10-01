@@ -1,4 +1,4 @@
-package br.com.bg.siscad.tela.controlador;
+package br.com.bg.siscad.controlador;
 /**
  *
  * @author l

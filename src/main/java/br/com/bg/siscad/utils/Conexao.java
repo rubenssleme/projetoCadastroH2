@@ -1,4 +1,4 @@
-package br.com.bg.siscad.nucleo.comum.utils;
+package br.com.bg.siscad.utils;
 
 
 import java.sql.Connection;

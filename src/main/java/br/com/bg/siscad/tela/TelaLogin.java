@@ -1,7 +1,7 @@
 package br.com.bg.siscad.tela;
 
-import br.com.bg.siscad.tela.controlador.ControladorTelaLogin;
-import br.com.bg.siscad.cadastramento.api.service.UsuarioServico;
+import br.com.bg.siscad.controlador.ControladorTelaLogin;
+import br.com.bg.siscad.service.UsuarioServico;
 import org.springframework.stereotype.Component;
 
 /**

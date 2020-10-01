@@ -7,8 +7,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import br.com.bg.siscad.cadastramento.api.Usuario;
-import br.com.bg.siscad.cadastramento.api.repository.UsuarioRepositorio;
+import br.com.bg.siscad.dominio.Usuario;
+import br.com.bg.siscad.repository.UsuarioRepositorio;
 import br.com.bg.siscad.tela.TelaLogin;
 import javax.swing.UIManager;
 import org.slf4j.Logger;

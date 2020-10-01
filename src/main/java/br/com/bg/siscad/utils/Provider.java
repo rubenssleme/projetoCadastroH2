@@ -1,6 +1,6 @@
-package br.com.bg.siscad.nucleo.comum.utils;
+package br.com.bg.siscad.utils;
 
-import br.com.bg.siscad.cadastramento.api.service.UsuarioServico;
+import br.com.bg.siscad.service.UsuarioServico;
 import br.com.bg.siscad.tela.TelaLogin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

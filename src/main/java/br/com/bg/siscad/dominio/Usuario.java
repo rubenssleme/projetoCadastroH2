@@ -1,4 +1,4 @@
-package br.com.bg.siscad.cadastramento.api;
+package br.com.bg.siscad.dominio;
 
 import java.io.Serializable;
 

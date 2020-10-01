@@ -1,8 +1,8 @@
-package br.com.bg.siscad.tela.controlador;
+package br.com.bg.siscad.controlador;
 
 import br.com.bg.siscad.tela.TelaPrincipal;
-import br.com.bg.siscad.cadastramento.api.Usuario;
-import br.com.bg.siscad.cadastramento.api.service.UsuarioServico;
+import br.com.bg.siscad.dominio.Usuario;
+import br.com.bg.siscad.service.UsuarioServico;
 //import br.com.bg.sgfapm.utilitarios.Conexao;
 import java.awt.Color;
 import java.awt.event.ActionEvent;

@@ -1,4 +1,4 @@
-package br.com.bg.siscad.tela.controlador;
+package br.com.bg.siscad.controlador;
 
 import br.com.bg.siscad.tela.AcessoRapido;
 import br.com.bg.siscad.tela.TelaCadastroBiometrias;

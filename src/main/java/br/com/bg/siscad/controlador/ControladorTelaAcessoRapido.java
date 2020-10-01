@@ -1,6 +1,6 @@
-package br.com.bg.siscad.tela.controlador;
+package br.com.bg.siscad.controlador;
 
-import br.com.bg.siscad.tela.controlador.ControladorTela;
+import br.com.bg.siscad.controlador.ControladorTela;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JDesktopPane;
