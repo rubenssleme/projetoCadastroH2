@@ -1,5 +1,6 @@
 package br.com.bg.siscad.controlador;
 
+import br.com.bg.siscad.tela.TelaMenu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DateFormat;
@@ -29,6 +30,7 @@ public class ControladorTelaMenu extends ControladorTela {
         this.jlaDiaSemana = jlaDiaSemana;
         this.jlaUsuarioLogado =jlaUsuarioLogado;
         atualizacaoTimer();
+        acessoRapido(telaMenu, desktop);
     }
 
     private void atualizarHora() {
@@ -56,8 +58,11 @@ public class ControladorTelaMenu extends ControladorTela {
         timer.start();
 
         atualizarData();
+          
     }
 
+    
+    
     
 
 }

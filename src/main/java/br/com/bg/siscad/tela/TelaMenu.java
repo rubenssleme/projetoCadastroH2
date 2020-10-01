@@ -35,6 +35,8 @@ public class TelaMenu extends javax.swing.JFrame {
         jmiCadastroProduto = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jmeOpcoes = new javax.swing.JMenu();
+        jmiSair = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela de Menu");
@@ -192,6 +194,18 @@ public class TelaMenu extends javax.swing.JFrame {
         jMenu2.setText("Consulta");
         jMenuBar1.add(jMenu2);
 
+        jmeOpcoes.setText("Opções");
+
+        jmiSair.setText("Sair");
+        jmiSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiSairActionPerformed(evt);
+            }
+        });
+        jmeOpcoes.add(jmiSair);
+
+        jMenuBar1.add(jmeOpcoes);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -222,12 +236,16 @@ public class TelaMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jmiCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCadastroClienteActionPerformed
-        controladorTelaMenu.exibirTelaCadastroUsuario();
+//        controladorTelaMenu.exibirTelaCadastroUsuario();
     }//GEN-LAST:event_jmiCadastroClienteActionPerformed
 
     private void jmiCadastroProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCadastroProdutoActionPerformed
-        controladorTelaMenu.exibirTelaCadastroProduto();
+//        controladorTelaMenu.exibirTelaCadastroProduto();
     }//GEN-LAST:event_jmiCadastroProdutoActionPerformed
+
+    private void jmiSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiSairActionPerformed
+//        controladorTelaMenu.fechar();
+    }//GEN-LAST:event_jmiSairActionPerformed
     public void setUsuarioLogado(String usuario) {
         this.jlaUsuarioLogado.setText(usuario);
     }
@@ -244,8 +262,10 @@ public class TelaMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jlaDiaSemana;
     private javax.swing.JLabel jlaHora;
     private javax.swing.JLabel jlaUsuarioLogado;
+    private javax.swing.JMenu jmeOpcoes;
     private javax.swing.JMenuItem jmiCadastroCliente;
     private javax.swing.JMenuItem jmiCadastroProduto;
+    private javax.swing.JMenuItem jmiSair;
     private javax.swing.JPanel jpaBarraInformacao;
     private javax.swing.JPanel jpaInfoDataHora;
     private javax.swing.JPanel jpaLogoEmpresa;

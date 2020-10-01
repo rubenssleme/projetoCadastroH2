@@ -76,7 +76,7 @@ public class ControladorTelaPrincipal extends ControladorTela {
         timer.start();
         
         atualizarData();
-//        acessoRapido(telaPrincipal, desktop);
+       acessoRapido(telaPrincipal, desktop);
 
         aluno.addActionListener(new ActionListener() {
             @Override
@@ -182,7 +182,7 @@ public class ControladorTelaPrincipal extends ControladorTela {
         lblHora.setText(new SimpleDateFormat("HH:mm:ss").format(new Date()));
     }
 
-    private void fechar() {
+    public void fechar() {
         int sair = JOptionPane.showConfirmDialog(null,
                 "Tem certeza que deseja sair?", "Atenção", JOptionPane.YES_NO_OPTION);
         if (sair == JOptionPane.YES_OPTION) {
