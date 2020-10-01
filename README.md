@@ -1,2 +1,2 @@
-# projetoCadastroH2
-projetoCadastroH2
+# cursoSpringBoot2020
+Curso de Spring Boot para atualização 2020
