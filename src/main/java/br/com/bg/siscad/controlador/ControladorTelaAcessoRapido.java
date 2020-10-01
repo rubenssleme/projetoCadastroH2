@@ -39,55 +39,55 @@ public class ControladorTelaAcessoRapido extends ControladorTela {
         this.lblConsultar.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent evt) {
-                telaConsulta();
+                //telaConsulta();
             }
         });
         this.lblAluno.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent evt) {
-                telaCadastroAluno();
+              //  telaCadastroAluno();
             }
         });
         this.lblFuncionario.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent evt) {
-                telaCadastroFuncionario();
+              //  telaCadastroFuncionario();
             }
         });
         this.lblUsuario.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent evt) {
-                telaCadastroUsuario();
+//                telaCadastroUsuario();
             }
         });
         this.lblProduto.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent evt) {
-                telaCadastroProduto();
+//                telaCadastroProduto();
             }
         });
         this.lblContribuicao.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent evt) {
-                telaContribuicao();
+//                telaContribuicao();
             }
         });
         this.lblVenda.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent evt) {
-                telaVenda();
+//                telaVenda();
             }
         });
         this.lblCompraProduto.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent evt) {
-                telaCompraProduto();
+//                telaCompraProduto();
             }
         });
         this.lblDespesa.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent evt) {
-                telaDespesa();
+//                telaDespesa();
             }
         });
     }

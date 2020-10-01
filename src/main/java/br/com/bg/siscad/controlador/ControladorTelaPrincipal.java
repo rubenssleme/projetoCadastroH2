@@ -76,60 +76,60 @@ public class ControladorTelaPrincipal extends ControladorTela {
         timer.start();
         
         atualizarData();
-        acessoRapido(telaPrincipal, desktop);
+//        acessoRapido(telaPrincipal, desktop);
 
         aluno.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                telaCadastroAluno();
+//                telaCadastroAluno();
             }
         });
         funcionario.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                telaCadastroFuncionario();
+//                telaCadastroFuncionario();
             }
         });
         usuario.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                telaCadastroUsuario();
+//                telaCadastroUsuario();
             }
         });
         produto.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                telaCadastroProduto();
+//                telaCadastroProduto();
             }
         });
         consultar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                telaConsulta();
+//                telaConsulta();
             }
         });
         compraProduto.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                telaCompraProduto();
+//                telaCompraProduto();
             }
         });
         contribuicao.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                telaContribuicao();
+//                telaContribuicao();
             }
         });
         despesa.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                telaDespesa();
+//                telaDespesa();
             }
         });
         venda.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                telaVenda();
+//                telaVenda();
             }
         });
         caixa.addActionListener(new ActionListener() {
@@ -141,13 +141,13 @@ public class ControladorTelaPrincipal extends ControladorTela {
         sobre.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                telaSobre();
+//                telaSobre();
             }
         });
         configuracoes.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                telaConfiguracoes();
+//                telaConfiguracoes();
             }
         });
         sair.addActionListener(new ActionListener() {
@@ -158,7 +158,7 @@ public class ControladorTelaPrincipal extends ControladorTela {
         });
         consultar.addMouseListener(new MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                telaConsulta();
+//                telaConsulta();
             }
         });
         telaPrincipal.addWindowListener(new WindowAdapter() {
@@ -194,7 +194,7 @@ public class ControladorTelaPrincipal extends ControladorTela {
         int sair = JOptionPane.showConfirmDialog(null,
                 "Tem certeza que deseja sair?", "Atenção", JOptionPane.YES_NO_OPTION);
         if (sair == JOptionPane.YES_OPTION) {
-            telaLogin();
+//            telaLogin();
         }
     }
 }
