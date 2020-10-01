@@ -2,20 +2,19 @@ package br.com.bg.siscad.tela;
 
 import br.com.bg.siscad.controlador.ControladorTelaMenu;
 
-
-
 /**
  *
- * @author Rubens Leme oi
+ * @author Rubens Leme
  */
 public class TelaMenu extends javax.swing.JFrame {
 
     public TelaMenu() {
         initComponents();
-        controladorTelaMenu = new ControladorTelaMenu(this, jdpTelaFilha, jlaHora, jlaData, jlaDiaSemana);
+        controladorTelaMenu = new ControladorTelaMenu(this, jdpTelaFilha, jlaUsuarioLogado, jlaHora, jlaData, jlaDiaSemana);
         setExtendedState(MAXIMIZED_BOTH);
     }
- @SuppressWarnings("unchecked")
+
+    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -43,7 +42,7 @@ public class TelaMenu extends javax.swing.JFrame {
         setFocusCycleRoot(false);
         setResizable(false);
 
-        jpaUsuarioLogado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Usuário logado:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(204, 0, 0))); // NOI18N
+        jpaUsuarioLogado.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Usuário logado:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(204, 0, 0))); // NOI18N
 
         jlaUsuarioLogado.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jlaUsuarioLogado.setForeground(new java.awt.Color(153, 0, 0));
@@ -66,10 +65,10 @@ public class TelaMenu extends javax.swing.JFrame {
                 .addContainerGap(70, Short.MAX_VALUE))
         );
 
-        jpaLogoEmpresa.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Logo Empresa:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 0, 0))); // NOI18N
+        jpaLogoEmpresa.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Logo Empresa:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(153, 0, 0))); // NOI18N
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/bg/comhibernate/icones/logo_bg.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/logo_bg.png"))); // NOI18N
 
         javax.swing.GroupLayout jpaLogoEmpresaLayout = new javax.swing.GroupLayout(jpaLogoEmpresa);
         jpaLogoEmpresa.setLayout(jpaLogoEmpresaLayout);
@@ -77,15 +76,15 @@ public class TelaMenu extends javax.swing.JFrame {
             jpaLogoEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpaLogoEmpresaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jpaLogoEmpresaLayout.setVerticalGroup(
             jpaLogoEmpresaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
         );
 
-        jpaInfoDataHora.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 0, 0))); // NOI18N
+        jpaInfoDataHora.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Informações:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(153, 0, 0))); // NOI18N
 
         jlaHora.setFont(new java.awt.Font("Cantarell", 1, 36)); // NOI18N
         jlaHora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -124,10 +123,11 @@ public class TelaMenu extends javax.swing.JFrame {
         jpaBarraInformacaoLayout.setHorizontalGroup(
             jpaBarraInformacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpaBarraInformacaoLayout.createSequentialGroup()
-                .addGroup(jpaBarraInformacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jpaInfoDataHora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jpaUsuarioLogado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jpaLogoEmpresa, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jpaBarraInformacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpaBarraInformacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jpaInfoDataHora, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jpaUsuarioLogado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jpaLogoEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpaBarraInformacaoLayout.setVerticalGroup(
@@ -137,7 +137,7 @@ public class TelaMenu extends javax.swing.JFrame {
                 .addComponent(jpaUsuarioLogado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jpaInfoDataHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 246, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
                 .addComponent(jpaLogoEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -228,6 +228,9 @@ public class TelaMenu extends javax.swing.JFrame {
     private void jmiCadastroProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCadastroProdutoActionPerformed
         controladorTelaMenu.exibirTelaCadastroProduto();
     }//GEN-LAST:event_jmiCadastroProdutoActionPerformed
+    public void setUsuarioLogado(String usuario) {
+        this.jlaUsuarioLogado.setText(usuario);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

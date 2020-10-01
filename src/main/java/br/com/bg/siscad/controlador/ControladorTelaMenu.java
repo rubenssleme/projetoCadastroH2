@@ -19,13 +19,15 @@ public class ControladorTelaMenu extends ControladorTela {
     private JLabel jlaHora;
     private JLabel jlaData;
     private JLabel jlaDiaSemana;
+    private JLabel jlaUsuarioLogado;
     private Timer timer;
 
-    public ControladorTelaMenu(JFrame telaMenu, JDesktopPane desktop, JLabel jlaHora, JLabel jlaData, JLabel jlaDiaSemana) {
+    public ControladorTelaMenu(JFrame telaMenu, JDesktopPane desktop,JLabel jlaUsuarioLogado,JLabel jlaHora, JLabel jlaData, JLabel jlaDiaSemana) {
         super(telaMenu, desktop);
         this.jlaHora = jlaHora;
         this.jlaData = jlaData;
         this.jlaDiaSemana = jlaDiaSemana;
+        this.jlaUsuarioLogado =jlaUsuarioLogado;
         atualizacaoTimer();
     }
 

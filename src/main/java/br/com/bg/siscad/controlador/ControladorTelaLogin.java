@@ -3,6 +3,7 @@ package br.com.bg.siscad.controlador;
 import br.com.bg.siscad.tela.TelaPrincipal;
 import br.com.bg.siscad.dominio.Usuario;
 import br.com.bg.siscad.service.UsuarioServico;
+import br.com.bg.siscad.tela.TelaMenu;
 //import br.com.bg.sgfapm.utilitarios.Conexao;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -40,13 +41,13 @@ public class ControladorTelaLogin {
         this.txtSenha.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                logar();
+                logar2();
             }
         });
         this.btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                logar();
+                logar2();
             }
         });
 
@@ -54,21 +55,7 @@ public class ControladorTelaLogin {
         this.usuarioServico = usuarioServico;
     }
 
-//    private void checarConexao() {
-//        try (Connection conexao = new Conexao().getConnection()) {
-//            if (conexao != null) {
-//                lblStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource(
-//                        "/br/com/bg/sgfapm/icones/db-ok.png")));
-//                lblStatus.setToolTipText("Status de conexão: Conectado");
-//            } else {
-//                lblStatus.setIcon(new javax.swing.ImageIcon(getClass().getResource(
-//                        "/br/com/bg/sgfapm/icones/db-error.png")));
-//                lblStatus.setToolTipText("Status de conexão: Não conectado");
-//            }
-//        } catch (SQLException ex) {
-//            Logger.getLogger(ControladorTelaLogin.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//    }
+
     private void transferirFoco(JComponent campo) {
         campo.transferFocus();
     }
@@ -77,16 +64,32 @@ public class ControladorTelaLogin {
         return !(txtUsuario.getText().isEmpty() || txtSenha.getText().isEmpty());
     }
 
+    
+    private void logar2(){
+        if (camposPreenchidos()) {
+            if (usuarioCadastrado()) {
+             TelaMenu telaMenu = new TelaMenu();
+             telaMenu.setUsuarioLogado(usuario.getNome());
+             telaMenu.setVisible(true);
+             telaLogin.setVisible(false);
+             
+            } 
+        }
+    }
+    
+    
+    
     private void logar() {
         if (camposPreenchidos()) {
             if (usuarioCadastrado()) {
                 TelaPrincipal principal = new TelaPrincipal();
-                principal.lblUsuario.setText(usuario.getNome());
+              //  principal.setUsuarioLogado(usuario.getNome());
+              principal.lblUsuario.setText(usuario.getNome());
                 if (usuario.getPerfil().equals("admin")) {
                     TelaPrincipal.menuRelatorio.setEnabled(true);
                     TelaPrincipal.menuCadastroUsuario.setEnabled(true);
-                    principal.lblUsuario.setText(usuario.getNome());
-                    principal.lblUsuario.setForeground(Color.red);
+                     principal.lblUsuario.setText(usuario.getNome());
+                   // principal.lblUsuario.setForeground(Color.red);
                 } else {
                     TelaPrincipal.menuRelatorio.setEnabled(false);
                     TelaPrincipal.menuCadastroUsuario.setEnabled(false);
@@ -121,7 +124,7 @@ public class ControladorTelaLogin {
 
     private void fechar() {
         telaLogin.setVisible(false);
-        TelaPrincipal telaPrincipal = new TelaPrincipal();
-        telaPrincipal.setVisible(true);
+        TelaMenu telaMenu = new TelaMenu();
+        telaMenu.setVisible(true);
     }
 }
