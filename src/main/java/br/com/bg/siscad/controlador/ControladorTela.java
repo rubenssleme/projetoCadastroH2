@@ -1,8 +1,7 @@
 package br.com.bg.siscad.controlador;
 
-
-
 import br.com.bg.siscad.tela.AcessoRapido;
+import br.com.bg.siscad.tela.TelaCadastroProduto;
 import br.com.bg.siscad.tela.TelaCadastroUsuario;
 import java.beans.PropertyVetoException;
 import java.util.logging.Level;
@@ -25,7 +24,7 @@ public abstract class ControladorTela {
 //    private TelaLogin login;
 //    private TelaCadastroUsuario usuario;
 //    private TelaCadastroBiometrias aluno;
-//    private TelaCadastroProduto produto;
+    private TelaCadastroProduto produto;
 //    private TelaCadastroFuncionario funcionario;
 //    private TelaConsulta consulta;
 //    private TelaContribuicao contribuicao;
@@ -74,7 +73,6 @@ public abstract class ControladorTela {
 //        usuario.setVisible(true);
 //        mostrarTela(usuario);
 //    }
-
 //    public void telaCadastroAluno() {
 //        if (aluno == null) {
 //            aluno = new TelaCadastroBiometrias();
@@ -83,16 +81,14 @@ public abstract class ControladorTela {
 //        aluno.setVisible(true);
 //        mostrarTela(aluno);
 //    }
-
-//    public void telaCadastroProduto() {
-//        if (produto == null) {
-//            produto = new TelaCadastroProduto();
-//            desktop.add(produto);
-//        }
-//        produto.setVisible(true);
-//        mostrarTela(produto);
-//    }
-
+    public void telaCadastroProduto() {
+        if (produto == null) {
+            produto = new TelaCadastroProduto();
+            desktop.add(produto);
+        }
+        produto.setVisible(true);
+        mostrarTela(produto);
+    }
 //    public void telaCadastroFuncionario() {
 //        if (funcionario == null) {
 //            funcionario = new TelaCadastroFuncionario();
@@ -101,7 +97,6 @@ public abstract class ControladorTela {
 //        funcionario.setVisible(true);
 //        mostrarTela(funcionario);
 //    }
-
 //    public void telaConsulta() {
 //        if (consulta == null) {
 //            consulta = new TelaConsulta();
@@ -110,7 +105,6 @@ public abstract class ControladorTela {
 //        consulta.setVisible(true);
 //        mostrarTela(consulta);
 //    }
-
 //    public void telaContribuicao() {
 //        if (contribuicao == null) {
 //            contribuicao = new TelaContribuicao();
@@ -119,7 +113,6 @@ public abstract class ControladorTela {
 //        contribuicao.setVisible(true);
 //        mostrarTela(contribuicao);
 //    }
-
 //    public void telaCompraProduto() {
 //        if (compraProduto == null) {
 //            compraProduto = new TelaCompraProduto();
@@ -128,7 +121,6 @@ public abstract class ControladorTela {
 //        compraProduto.setVisible(true);
 //        mostrarTela(compraProduto);
 //    }
-
 //    public void telaDespesa() {
 //        if (despesa == null) {
 //            despesa = new TelaDespesa();
@@ -137,7 +129,6 @@ public abstract class ControladorTela {
 //        despesa.setVisible(true);
 //        mostrarTela(despesa);
 //    }
-
 //    public void telaVenda() {
 //        if (venda == null) {
 //            venda = new TelaVenda();
@@ -146,7 +137,6 @@ public abstract class ControladorTela {
 //        venda.setVisible(true);
 //        mostrarTela(venda);
 //    }
-
 //    public void telaConfiguracoes() {
 //        if (config == null) {
 //            config = new TelaConfiguracao();
@@ -155,6 +145,9 @@ public abstract class ControladorTela {
 //        config.setVisible(true);
 //        mostrarTela(config);
 //    }
+    public void fecharTela() {
+        System.exit(0);
+    }
 
     private void mostrarTela(JInternalFrame tela) {
         if (tela != acessoRapido) {

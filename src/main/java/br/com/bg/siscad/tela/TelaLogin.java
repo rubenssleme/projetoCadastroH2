@@ -163,4 +163,5 @@ public class TelaLogin extends javax.swing.JFrame {
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
     private ControladorTelaLogin controlador;
+
 }

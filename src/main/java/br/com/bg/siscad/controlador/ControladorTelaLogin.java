@@ -55,7 +55,6 @@ public class ControladorTelaLogin {
         this.usuarioServico = usuarioServico;
     }
 
-
     private void transferirFoco(JComponent campo) {
         campo.transferFocus();
     }
@@ -64,32 +63,29 @@ public class ControladorTelaLogin {
         return !(txtUsuario.getText().isEmpty() || txtSenha.getText().isEmpty());
     }
 
-    
-    private void logar2(){
+    private void logar2() {
         if (camposPreenchidos()) {
             if (usuarioCadastrado()) {
-             TelaMenu telaMenu = new TelaMenu();
-             telaMenu.setUsuarioLogado(usuario.getNome());
-             telaMenu.setVisible(true);
-             telaLogin.setVisible(false);
-             
-            } 
+                TelaMenu telaMenu = new TelaMenu();
+                telaMenu.setUsuarioLogado(usuario.getNome());
+                telaMenu.setVisible(true);
+                telaLogin.setVisible(false);
+
+            }
         }
     }
-    
-    
-    
+
     private void logar() {
         if (camposPreenchidos()) {
             if (usuarioCadastrado()) {
                 TelaPrincipal principal = new TelaPrincipal();
-              //  principal.setUsuarioLogado(usuario.getNome());
-              principal.lblUsuario.setText(usuario.getNome());
+                //  principal.setUsuarioLogado(usuario.getNome());
+                principal.lblUsuario.setText(usuario.getNome());
                 if (usuario.getPerfil().equals("admin")) {
                     TelaPrincipal.menuRelatorio.setEnabled(true);
                     TelaPrincipal.menuCadastroUsuario.setEnabled(true);
-                     principal.lblUsuario.setText(usuario.getNome());
-                   // principal.lblUsuario.setForeground(Color.red);
+                    principal.lblUsuario.setText(usuario.getNome());
+                    // principal.lblUsuario.setForeground(Color.red);
                 } else {
                     TelaPrincipal.menuRelatorio.setEnabled(false);
                     TelaPrincipal.menuCadastroUsuario.setEnabled(false);
@@ -122,7 +118,7 @@ public class ControladorTelaLogin {
         return usuario != null;
     }
 
-    private void fechar() {
+    public void fecharTela() {
         telaLogin.setVisible(false);
         TelaMenu telaMenu = new TelaMenu();
         telaMenu.setVisible(true);

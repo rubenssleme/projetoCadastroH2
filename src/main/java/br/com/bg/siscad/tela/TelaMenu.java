@@ -1,6 +1,7 @@
 package br.com.bg.siscad.tela;
 
 import br.com.bg.siscad.controlador.ControladorTelaMenu;
+import static br.com.bg.siscad.tela.TelaPrincipal.menuCadastroUsuario;
 
 /**
  *
@@ -10,7 +11,12 @@ public class TelaMenu extends javax.swing.JFrame {
 
     public TelaMenu() {
         initComponents();
-        controladorTelaMenu = new ControladorTelaMenu(this, jdpTelaFilha, jlaUsuarioLogado, jlaHora, jlaData, jlaDiaSemana);
+        controladorTelaMenu = new ControladorTelaMenu(this, jdpTelaFilha,
+                menuCadastroAluno,menuCadastroFuncionario, menuCadastroUsuario, menuCadastroProduto,
+                menuConsultar, menuRegistrarCompraProduto, menuRegistrarContribuicao,
+                menuRegistrarDespesa, menuRegistrarVenda, menuCaixa, menuAjudaSobre,
+                menuOpcoesConfiguracoes, menuOpcoesSair,
+                jlaUsuarioLogado, jlaHora, jlaData, jlaDiaSemana);
         setExtendedState(MAXIMIZED_BOTH);
     }
 
@@ -30,13 +36,26 @@ public class TelaMenu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jdpTelaFilha = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jmiCadastroCliente = new javax.swing.JMenuItem();
-        jmiCadastroProduto = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jmeOpcoes = new javax.swing.JMenu();
-        jmiSair = new javax.swing.JMenuItem();
+        menuCadastro = new javax.swing.JMenu();
+        menuCadastroAluno = new javax.swing.JMenuItem();
+        menuCadastroFuncionario = new javax.swing.JMenuItem();
+        menuCadastroUsuario = new javax.swing.JMenuItem();
+        menuCadastroProduto = new javax.swing.JMenuItem();
+        menuConsultar = new javax.swing.JMenu();
+        menuRegistrar = new javax.swing.JMenu();
+        menuRegistrarCompraProduto = new javax.swing.JMenuItem();
+        menuRegistrarContribuicao = new javax.swing.JMenuItem();
+        menuRegistrarDespesa = new javax.swing.JMenuItem();
+        menuRegistrarVenda = new javax.swing.JMenuItem();
+        menuRelatorio = new javax.swing.JMenu();
+        menuRelatorioAlunos = new javax.swing.JMenuItem();
+        menuRelatorioServicos = new javax.swing.JMenuItem();
+        menuCaixa = new javax.swing.JMenu();
+        menuAjuda = new javax.swing.JMenu();
+        menuAjudaSobre = new javax.swing.JMenuItem();
+        menuOpcoes = new javax.swing.JMenu();
+        menuOpcoesConfiguracoes = new javax.swing.JMenuItem();
+        menuOpcoesSair = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela de Menu");
@@ -139,7 +158,7 @@ public class TelaMenu extends javax.swing.JFrame {
                 .addComponent(jpaUsuarioLogado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jpaInfoDataHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
                 .addComponent(jpaLogoEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -168,43 +187,84 @@ public class TelaMenu extends javax.swing.JFrame {
             .addComponent(jdpTelaFilha)
         );
 
-        jMenu1.setText("Cadastro");
+        menuCadastro.setText("Cadastro");
 
-        jmiCadastroCliente.setText("Cadastro Usuario");
-        jmiCadastroCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiCadastroClienteActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jmiCadastroCliente);
+        menuCadastroAluno.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_DOWN_MASK));
+        menuCadastroAluno.setText("Aluno");
+        menuCadastro.add(menuCadastroAluno);
 
-        jmiCadastroProduto.setText("Cadastro Produto");
-        jmiCadastroProduto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiCadastroProdutoActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jmiCadastroProduto);
+        menuCadastroFuncionario.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.ALT_DOWN_MASK));
+        menuCadastroFuncionario.setText("Funcionário");
+        menuCadastro.add(menuCadastroFuncionario);
 
-        jMenuItem2.setText("jMenuItem2");
-        jMenu1.add(jMenuItem2);
+        menuCadastroUsuario.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.ALT_DOWN_MASK));
+        menuCadastroUsuario.setText("Usuário");
+        menuCadastroUsuario.setEnabled(false);
+        menuCadastro.add(menuCadastroUsuario);
 
-        jMenuBar1.add(jMenu1);
+        menuCadastroProduto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.ALT_DOWN_MASK));
+        menuCadastroProduto.setText("Produto");
+        menuCadastro.add(menuCadastroProduto);
 
-        jMenu2.setText("Consulta");
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(menuCadastro);
 
-        jmeOpcoes.setText("Opções");
+        menuConsultar.setText("Consultar");
+        jMenuBar1.add(menuConsultar);
 
-        jmiSair.setText("Sair");
-        jmiSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiSairActionPerformed(evt);
-            }
-        });
-        jmeOpcoes.add(jmiSair);
+        menuRegistrar.setText("Registrar");
 
-        jMenuBar1.add(jmeOpcoes);
+        menuRegistrarCompraProduto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        menuRegistrarCompraProduto.setText("Compra de Produto");
+        menuRegistrar.add(menuRegistrarCompraProduto);
+
+        menuRegistrarContribuicao.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        menuRegistrarContribuicao.setText("Contribuição");
+        menuRegistrar.add(menuRegistrarContribuicao);
+
+        menuRegistrarDespesa.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        menuRegistrarDespesa.setText("Despesa");
+        menuRegistrar.add(menuRegistrarDespesa);
+
+        menuRegistrarVenda.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
+        menuRegistrarVenda.setText("Venda");
+        menuRegistrar.add(menuRegistrarVenda);
+
+        jMenuBar1.add(menuRegistrar);
+
+        menuRelatorio.setText("Relatório");
+        menuRelatorio.setEnabled(false);
+
+        menuRelatorioAlunos.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.ALT_DOWN_MASK));
+        menuRelatorioAlunos.setText("Alunos");
+        menuRelatorio.add(menuRelatorioAlunos);
+
+        menuRelatorioServicos.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.ALT_DOWN_MASK));
+        menuRelatorioServicos.setText("Serviços");
+        menuRelatorio.add(menuRelatorioServicos);
+
+        jMenuBar1.add(menuRelatorio);
+
+        menuCaixa.setText("Caixa");
+        jMenuBar1.add(menuCaixa);
+
+        menuAjuda.setText("Ajuda");
+
+        menuAjudaSobre.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
+        menuAjudaSobre.setText("Sobre");
+        menuAjuda.add(menuAjudaSobre);
+
+        jMenuBar1.add(menuAjuda);
+
+        menuOpcoes.setText("Opções");
+
+        menuOpcoesConfiguracoes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        menuOpcoesConfiguracoes.setText("Configurações");
+        menuOpcoes.add(menuOpcoesConfiguracoes);
+
+        menuOpcoesSair.setText("Sair");
+        menuOpcoes.add(menuOpcoesSair);
+
+        jMenuBar1.add(menuOpcoes);
 
         setJMenuBar(jMenuBar1);
 
@@ -234,42 +294,43 @@ public class TelaMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jmiCadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCadastroClienteActionPerformed
-//        controladorTelaMenu.exibirTelaCadastroUsuario();
-    }//GEN-LAST:event_jmiCadastroClienteActionPerformed
-
-    private void jmiCadastroProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCadastroProdutoActionPerformed
-//        controladorTelaMenu.exibirTelaCadastroProduto();
-    }//GEN-LAST:event_jmiCadastroProdutoActionPerformed
-
-    private void jmiSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiSairActionPerformed
-//        controladorTelaMenu.fechar();
-    }//GEN-LAST:event_jmiSairActionPerformed
     public void setUsuarioLogado(String usuario) {
         this.jlaUsuarioLogado.setText(usuario);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JDesktopPane jdpTelaFilha;
     private javax.swing.JLabel jlaData;
     private javax.swing.JLabel jlaDiaSemana;
     private javax.swing.JLabel jlaHora;
     private javax.swing.JLabel jlaUsuarioLogado;
-    private javax.swing.JMenu jmeOpcoes;
-    private javax.swing.JMenuItem jmiCadastroCliente;
-    private javax.swing.JMenuItem jmiCadastroProduto;
-    private javax.swing.JMenuItem jmiSair;
     private javax.swing.JPanel jpaBarraInformacao;
     private javax.swing.JPanel jpaInfoDataHora;
     private javax.swing.JPanel jpaLogoEmpresa;
     private javax.swing.JPanel jpaUsuarioLogado;
+    private javax.swing.JMenu menuAjuda;
+    private javax.swing.JMenuItem menuAjudaSobre;
+    private javax.swing.JMenu menuCadastro;
+    private javax.swing.JMenuItem menuCadastroAluno;
+    private javax.swing.JMenuItem menuCadastroFuncionario;
+    private javax.swing.JMenuItem menuCadastroProduto;
+    public static javax.swing.JMenuItem menuCadastroUsuario;
+    private javax.swing.JMenu menuCaixa;
+    private javax.swing.JMenu menuConsultar;
+    private javax.swing.JMenu menuOpcoes;
+    private javax.swing.JMenuItem menuOpcoesConfiguracoes;
+    private javax.swing.JMenuItem menuOpcoesSair;
+    private javax.swing.JMenu menuRegistrar;
+    private javax.swing.JMenuItem menuRegistrarCompraProduto;
+    private javax.swing.JMenuItem menuRegistrarContribuicao;
+    private javax.swing.JMenuItem menuRegistrarDespesa;
+    private javax.swing.JMenuItem menuRegistrarVenda;
+    public static javax.swing.JMenu menuRelatorio;
+    private javax.swing.JMenuItem menuRelatorioAlunos;
+    private javax.swing.JMenuItem menuRelatorioServicos;
     // End of variables declaration//GEN-END:variables
     private ControladorTelaMenu controladorTelaMenu;
 }
