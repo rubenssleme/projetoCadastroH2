@@ -4,6 +4,7 @@ import br.com.bg.siscad.controlador.ControladorTela;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.text.DateFormat;
@@ -74,9 +75,9 @@ public class ControladorTelaPrincipal extends ControladorTela {
             }
         });
         timer.start();
-        
+
         atualizarData();
-       acessoRapido(telaPrincipal, desktop);
+        acessoRapido(telaPrincipal, desktop);
 
         aluno.addActionListener(new ActionListener() {
             @Override
@@ -96,6 +97,8 @@ public class ControladorTelaPrincipal extends ControladorTela {
 //                telaCadastroUsuario();
             }
         });
+        
+
         produto.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -189,8 +192,8 @@ public class ControladorTelaPrincipal extends ControladorTela {
             System.exit(0);
         }
     }
-    
-    private void sair(){
+
+    private void sair() {
         int sair = JOptionPane.showConfirmDialog(null,
                 "Tem certeza que deseja sair?", "Atenção", JOptionPane.YES_NO_OPTION);
         if (sair == JOptionPane.YES_OPTION) {

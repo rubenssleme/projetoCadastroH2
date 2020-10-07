@@ -2,8 +2,10 @@ package br.com.bg.siscad.config;
 
 import java.util.Arrays;
 
+import br.com.bg.siscad.utils.Provider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
@@ -32,8 +34,14 @@ public class TesteConfig implements CommandLineRunner {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private ApplicationContext appContext;
+
     @Override
     public void run(String... args) throws Exception {
+        logger.info("Inicializando o contexto da aplicação ...");
+        Provider.initContext(appContext);
+
         logger.info("Inicializando o banco com os dados de teste ...");
 
         Usuario u1 = new Usuario(null, "Maria Brown", "maria@gmail.com", "988888888", passwordEncoder.encode("123456"), "adm");

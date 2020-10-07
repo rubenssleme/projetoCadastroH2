@@ -57,7 +57,7 @@ public class ControladorTelaAcessoRapido extends ControladorTela {
         this.lblUsuario.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent evt) {
-//                telaCadastroUsuario();
+                telaCadastroUsuario();
             }
         });
         this.lblProduto.addMouseListener(new MouseAdapter() {

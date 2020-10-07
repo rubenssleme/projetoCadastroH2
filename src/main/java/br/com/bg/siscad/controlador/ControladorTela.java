@@ -22,7 +22,7 @@ public abstract class ControladorTela {
 
     private AcessoRapido acessoRapido;
 //    private TelaLogin login;
-//    private TelaCadastroUsuario usuario;
+    private TelaCadastroUsuario usuario;
 //    private TelaCadastroBiometrias aluno;
     private TelaCadastroProduto produto;
 //    private TelaCadastroFuncionario funcionario;
@@ -65,14 +65,14 @@ public abstract class ControladorTela {
 //        sobre.setVisible(true);
     }
 
-//    public void telaCadastroUsuario() {
-//        if (usuario == null) {
-//            usuario = new TelaCadastroUsuario();
-//            desktop.add(usuario);
-//        }
-//        usuario.setVisible(true);
-//        mostrarTela(usuario);
-//    }
+    public void telaCadastroUsuario() {
+        if (usuario == null) {
+            usuario = new TelaCadastroUsuario();
+            desktop.add(usuario);
+        }
+        usuario.setVisible(true);
+        mostrarTela(usuario);
+    }
 //    public void telaCadastroAluno() {
 //        if (aluno == null) {
 //            aluno = new TelaCadastroBiometrias();
