@@ -1,8 +1,7 @@
 package br.com.bg.siscad.utils;
 
 import br.com.bg.siscad.service.UsuarioServico;
-import br.com.bg.siscad.tela.TelaLogin;
-import org.springframework.beans.factory.annotation.Autowired;
+import br.com.bg.siscad.view.TelaLogin;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,13 +13,18 @@ public class Provider {
 
     private static ApplicationContext context;
 
-    @Autowired
-    private UsuarioServico usuarioServico;
+
+    private final UsuarioServico usuarioServico;
+
+    public Provider(UsuarioServico usuarioServico) {
+        this.usuarioServico = usuarioServico;
+    }
 
     public static void initContext(ApplicationContext context) {
         Provider.context = context;
     }
 
+    @org.jetbrains.annotations.NotNull
     public static <T> T getBean(Class<T> classeBean) {
         return context.getBean(classeBean);
     }

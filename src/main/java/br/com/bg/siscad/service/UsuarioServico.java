@@ -2,13 +2,13 @@ package br.com.bg.siscad.service;
 
 import java.util.List;
 import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import br.com.bg.siscad.dominio.Usuario;
 import br.com.bg.siscad.repository.UsuarioRepositorio;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import br.com.bg.siscad.model.entities.Usuario;
+
 
 @Service
 public class UsuarioServico {
@@ -16,8 +16,13 @@ public class UsuarioServico {
     @Autowired
     private UsuarioRepositorio usuarioRepositorio;
 
-    @Autowired
     private PasswordEncoder passwordEncoder;
+
+    public UsuarioServico(@Lazy PasswordEncoder passwordEncoder) {
+        this.passwordEncoder = passwordEncoder;
+    }
+
+
 
     public List<Usuario> findAll() {
         return usuarioRepositorio.findAll();
