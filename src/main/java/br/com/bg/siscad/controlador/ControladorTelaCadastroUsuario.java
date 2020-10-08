@@ -157,6 +157,7 @@ public class ControladorTelaCadastroUsuario {
         txtNomeUser.setText(null);
         txtLoginUser.setText(null);
         txtSenhaUser.setText(null);
+        jtfTelefone.setText(null);
         cboPerfilUser.setSelectedIndex(0);
     }
 
@@ -185,11 +186,11 @@ public class ControladorTelaCadastroUsuario {
     }
 
     private boolean inserir() {
-          // repUsuario.save(new Usuario(null,txtNomeUser.getText(),jtfTelefone.getText()  ,txtLoginUser.getText(),txtSenhaUser.getText(), cboPerfilUser.getSelectedItem().toString()));
           logger.info("Inicializando o banco com os dados de teste inserir ...");
           Usuario usu = new Usuario(null,txtNomeUser.getText(),txtLoginUser.getText(),jtfTelefone.getText(),txtSenhaUser.getText(), cboPerfilUser.getSelectedItem().toString());
           logger.info("Inserindo usuário de teste: {}", usu);
           usuarioRepositorio.saveAll(Arrays.asList(usu));
+          logger.info("Salvo com sucesso: {}", usu);
          
           return true;
     }
