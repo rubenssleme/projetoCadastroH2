@@ -3,7 +3,7 @@ package br.com.bg.siscad.config;
 import java.util.Arrays;
 import br.com.bg.siscad.model.entities.*;
 import br.com.bg.siscad.utils.Provider;
-import br.com.bg.siscad.view.TelaLogin;
+import br.com.bg.siscad.view.TelaLogin_v2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
@@ -28,7 +28,7 @@ public class TesteConfig implements CommandLineRunner {
 	private UsuarioRepositorio usuarioRepositorio;
 
 	@Autowired
-	private TelaLogin frame;
+	private TelaLogin_v2 frame;
 
 	@Autowired
 	private PasswordEncoder passwordEncoder;
@@ -43,10 +43,10 @@ public class TesteConfig implements CommandLineRunner {
 
 		logger.info("Inicializando o banco com os dados de teste ...");
 
-		Usuario u1 = new Usuario(null, "Maria Brown", "maria@gmail.com", "988888888", passwordEncoder.encode("123456"), "adm");
+		Usuario u1 = new Usuario(null, "Maria Brown", "maria@gmail.com", "988888888", passwordEncoder.encode("123456"), "admin");
 		logger.info("Inserindo usuário de teste: {}", u1);
 
-		Usuario u2 = new Usuario(null, "Alex Green", "alex@gmail.com", "977777777", passwordEncoder.encode("123456"), "adm");
+		Usuario u2 = new Usuario(null, "Alex Green", "alex@gmail.com", "977777777", passwordEncoder.encode("123456"), "admin");
 		logger.info("Inserindo usuário de teste: {}", u2);
 
 		usuarioRepositorio.saveAll(Arrays.asList(u1, u2));
