@@ -1,7 +1,7 @@
 package br.com.bg.siscad.utils;
 
 import br.com.bg.siscad.service.UsuarioServico;
-import br.com.bg.siscad.view.TelaLogin;
+import br.com.bg.siscad.view.TelaLogin_v2;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,8 +30,8 @@ public class Provider {
     }
 
     @Bean
-    public TelaLogin frame() {
-        return new TelaLogin(usuarioServico);
+    public TelaLogin_v2 frame() {
+        return new TelaLogin_v2(usuarioServico);
     }
 
     @Bean
