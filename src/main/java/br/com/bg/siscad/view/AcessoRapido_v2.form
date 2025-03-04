@@ -48,22 +48,17 @@
                   <Component id="jPanel3" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="jPanel2" max="32767" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jPanel2" max="32767" attributes="0"/>
+                          <Component id="jPanel9" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jPanel8" max="32767" attributes="0"/>
                           <Component id="jPanel7" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="58" max="32767" attributes="0"/>
+              <EmptySpace pref="52" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -71,17 +66,17 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jPanel8" max="32767" attributes="0"/>
                   <Component id="jPanel9" max="32767" attributes="0"/>
+                  <Component id="jPanel8" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jPanel2" max="32767" attributes="0"/>
-                  <Component id="jPanel7" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
           </Group>
@@ -532,7 +527,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="lblProduto2" alignment="0" max="32767" attributes="0"/>
                       <Component id="lblFuncionario1" alignment="0" max="32767" attributes="0"/>
-                      <Component id="lblAluno1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="lblAluno1" alignment="0" pref="135" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -649,7 +644,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="lblProduto3" alignment="0" max="32767" attributes="0"/>
                               <Component id="lblFuncionario2" alignment="0" max="32767" attributes="0"/>
-                              <Component id="lblAluno2" alignment="0" pref="128" max="32767" attributes="0"/>
+                              <Component id="lblAluno2" alignment="0" pref="246" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -775,7 +770,7 @@
                   <Component id="lblProduto4" min="-2" pref="150" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   <Component id="lblConsultar2" min="-2" pref="150" max="-2" attributes="0"/>
-                  <EmptySpace pref="14" max="32767" attributes="0"/>
+                  <EmptySpace pref="20" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -792,7 +787,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="lblProduto4" alignment="0" max="32767" attributes="0"/>
                               <Component id="lblFuncionario3" alignment="0" max="32767" attributes="0"/>
-                              <Component id="lblAluno3" alignment="0" pref="128" max="32767" attributes="0"/>
+                              <Component id="lblAluno3" alignment="0" pref="246" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
