@@ -1,6 +1,6 @@
 package br.com.bg.siscad.controller;
 
-import br.com.bg.siscad.view.AcessoRapido;
+import br.com.bg.siscad.view.AcessoRapido_v2;
 import br.com.bg.siscad.view.TelaCadastroProduto;
 import br.com.bg.siscad.view.TelaCadastroUsuario;
 import java.beans.PropertyVetoException;
@@ -18,7 +18,7 @@ public abstract class ControladorTela {
     private JFrame telaPrincipal;
     private JDesktopPane desktop;
 
-    private AcessoRapido acessoRapido;
+    private AcessoRapido_v2 acessoRapido;
     //    private TelaLogin login;
     private TelaCadastroUsuario usuario;
     //    private TelaCadastroBiometrias aluno;
@@ -38,7 +38,7 @@ public abstract class ControladorTela {
 
     public void acessoRapido(JFrame telaPrincipal, JDesktopPane desktop) {
         if (acessoRapido == null) {
-            acessoRapido = new AcessoRapido(telaPrincipal, desktop);
+            acessoRapido = new AcessoRapido_v2(telaPrincipal, desktop);
             desktop.add(acessoRapido);
         }
         acessoRapido.setVisible(true);
@@ -47,7 +47,7 @@ public abstract class ControladorTela {
 
     public void acessoRapido() {
         if (acessoRapido == null) {
-            acessoRapido = new AcessoRapido();
+            acessoRapido = new AcessoRapido_v2();
             desktop.add(acessoRapido);
         }
         acessoRapido.setVisible(true);
